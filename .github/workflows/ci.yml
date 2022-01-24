@@ -12,9 +12,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Semantic Release
-      uses: cycjimmy/semantic-release-action@v2
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.7
       with:
-        branch: main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        versionSpec: '5.5.0'
